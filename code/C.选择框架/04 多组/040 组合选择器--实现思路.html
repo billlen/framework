@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{height: 50px; padding: 10px; margin: 10px;}
+        body{padding: 0;}
+    </style>
+</head>
+<body>
+    <h3>h3</h3>
+    <div id="mydiv">id="mydiv"</div>
+    <div>div</div>
+    <span>span</span>
+    <span class="myspan">class="myspan"</span>
+</body>
+</html>
+<script>
+    //过渡
+    var dom = $(' div,#mydiv,.myspan,h3');
+    //1 宏观注释
+    //2 分步注释
+    //3 数据结构
+
+    //实现思路
+    //第一步： split--一一攻略
+    //标签   id   class
+    //逐个击破
+    function $(content){
+        //总体思路： 个个击破
+        //找到个个 ---放在数组里面 ---遍历--个个击破
+        //三种情况
+        var arr = [],result = [];
+        arr = content.split(',');
+        for(var i,len=arr.length;i<len;i++){
+            var first = arr[i].charAt(0);
+            if(first === '.'){
+                //各个击破-- class
+            }else if(first==='#'){
+                //各个击破-- id
+            }else{
+                //标签;
+            }
+        }
+        return result;
+    }
+</script>
+
+
+

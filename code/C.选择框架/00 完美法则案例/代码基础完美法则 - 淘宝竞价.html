@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+	div{height: 450px;
+width: 450px;
+margin: 100px auto;
+border: 1px solid rgb(213, 213, 213);
+text-align: center; }
+	
+</style>
+</head>
+
+<body>
+<div>
+	<img src='img/tp.jpg' />
+    <br />
+    <h1 id='myh1'>低价:1000元</h1>
+    <button id ='btn'>竞价</button>
+</div>
+</body>
+</html>
+<script>
+	 //寻找元素--保存在变量里面
+	  var btn = document.getElementById('btn');
+	  var myh1 = document.getElementById('myh1');
+	  var dijia =1000;
+	  var jingjia;
+	  var jieguo;
+	  
+	 //绑定元素
+	 btn.onclick = function()
+	 {
+		 
+		 //1 弹出一个文本提示框
+	     //2 获取用户输入的竞价
+		jingjia = prompt('请输入您的竞价','');
+		 //如果用户输入为空,提醒用户请输入您的竞价价格
+		   if(jingjia =='')
+		   {
+			   alert('请输入您要竞价的价格');
+		   }else{
+			   jingjia = parseInt(jingjia);
+			   
+			   if(isNaN(jingjia))
+			   {
+				  alert('请输入数字');   
+				} else{
+					    			   
+					   if(jingjia<0)
+					   {
+						   alert('哥,你开玩笑...');
+						}else
+						{
+							//3 弹出一个警示框 显示结果
+						   jieguo = dijia+jingjia;
+						   alert('最终价格:'+jieguo);
+						   //4竞价+低价 显示结果 = 竞价+低价
+							 myh1.innerHTML ='最终价格'+jieguo;
+						}
+					}
+			   
+			   
+			   
+			   
+
+				
+			   
+			   
+			   }
+		 
+		 
+		
+	
+	 }
+	 
+</script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+	div{background: none repeat scroll 0% 0% #F0F;
+width: 500px;
+text-align: center;
+margin: 100px auto;
+height: 50px;
+padding-top: 20px;}
+	input{width:300px}
+</style>
+</head>
+
+<body>
+
+
+<div>
+<span>请输入星座:</span>
+<input type='text' id='myinput'/>
+<button id='mybtn'>查看</button>
+</div>
+</body>
+</html>
+<script>
+	 //定义变量
+	 var input =document.getElementById('myinput');
+	 var btn = document.getElementById('mybtn');
+	 //绑定事件
+     btn.onclick = function()
+	 {
+		 var text = input.value;
+		 if(text =='')
+		 {
+			 alert('请输入您的星座');
+			 }
+		 else{
+			  if(text=='狮子座')
+		 {
+		  alert('精力旺盛、活力充沛的星座。性格与爱情多数“横冲直撞”，但纯真的个性里没有杀伤力，所以不用太担心。');	 
+		 }else if(text=='双子座')
+		 {
+		    alert('精力旺盛、活力充沛的星座。性格与爱情多数“横冲直撞”，但纯真的个性里没有杀伤力，所以不用太担心。');	 
+		 }else if(text=='天平座')
+		 {  
+		    alert('精力旺盛、活力充沛的星座。性格与爱情多数“横冲直撞”，但纯真的个性里没有杀伤力，所以不用太担心。');
+		 }else if(text=='射手座')
+		 { alert('精力旺盛、活力充沛的星座。性格与爱情多数“横冲直撞”，但纯真的个性里没有杀伤力，所以不用太担心。');
+		 }else if(text=='金牛座')
+		 { alert('精力旺盛、活力充沛的星座。性格与爱情多数“横冲直撞”，但纯真的个性里没有杀伤力，所以不用太担心。');
+		 }else if(text=='摩羯座')
+		 { alert('精力旺盛、活力充沛的星座。性格与爱情多数“横冲直撞”，但纯真的个性里没有杀伤力，所以不用太担心。');
+		 }else if(text=='白羊座')
+		 { alert('精力旺盛、活力充沛的星座。性格与爱情多数“横冲直撞”，但纯真的个性里没有杀伤力，所以不用太担心。');
+		 }else if(text=='射手座')
+		 { alert('精力旺盛、活力充沛的星座。性格与爱情多数“横冲直撞”，但纯真的个性里没有杀伤力，所以不用太担心。');
+		 }else
+		 {
+			 alert("请输入正确的星座名称,比如狮子座,双子座等");
+			 }
+			 }
+		 
+		 
+		 
+		
+		 
+		// alert(text);
+	 }
+</script>

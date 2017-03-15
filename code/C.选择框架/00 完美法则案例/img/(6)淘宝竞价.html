@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+div{border:1px solid #000; width:300px; padding:10px;}
+h1{text-align:center;}
+</style>
+<script type="text/javascript">
+var btn=document.getElementById('btn');
+btn.onclick=function(){
+	var dijia,jingjia,jieguo;
+	
+	dijia=1000;
+	
+	jingjia=prompt('请您输入您要增加的价格','例如100');
+	if(jingjia<0){
+		alert('别开玩笑了');
+	}else if(jingjia==''){
+		alert('操作有误')
+	}else if(isNaN(jingjia)){
+		alert('请输入数字')
+	}
+	else if(jingjia==null){
+		alert('操作有误')
+	}
+	else{
+		jieguo=dijia+parseInt(jingjia);
+		alert('恭喜你竞价成功，您拍得的最终价格是：'+jieguo);
+		document.getElementById('jiage').innerHTML='最终价格是:'+jieguo;
+	}
+	
+}
+</script>
+</head>
+
+<body>
+<div>
+<img src="img/tp.jpg"/>
+<h1 id="jiage">低价是1000</h1>
+<button onclick="jingjiafun()">我要竞价</button>
+</div>
+
+
+
+</body>
+</html>

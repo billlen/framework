@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span{
+            height:300px;
+            width:300px;
+            background:#F00;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id='mydiv'>
+        <span id='span'>点击我变成蓝色</span>
+        <span id='span2'>点击我变成蓝色</span>
+        <span id='span3'>点击我变成蓝色</span>
+        <span id='span4'>点击我变成蓝色</span>
+    </div>
+</body>
+</html>
+    <script>
+        var spans = $tag('span','mydeeeiv'){
+            for(var i=0;i<spans.length;i++){
+                spans[i].onclick = function(){
+                    this.style.background= 'blue';
+
+                }
+            }
+        }
+        function $tag(tag,id){
+            //完美法则
+            //我要的是id 结果你返给我dom元素
+            //我要的是数字，你哥们给我字符串 。。。类型
+            //tag id不合法
+            //提前预防
+            if(!id){
+                var dom = document.getElementById(id);
+                return dom.getElementsByTagName(tag);
+            }else{
+                return document.getElementsByTagName(tag);
+            }
+        }
+
+    </script>
+

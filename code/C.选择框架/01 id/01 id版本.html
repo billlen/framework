@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            height:300px;width:300px;background:#F00
+        }
+        span{
+            height:300px;width:300px;background:#F00
+        }
+    </style>
+</head>
+<body>
+    <div id="div">222</div>
+    <br/>
+    <span id="span">1111</span>
+</body>
+</html>
+<script src="itcast.js"></script>
+<script>
+    var div = $id('div');
+    var span = $id('span');
+
+    span.onclick = function(){
+        span.style.backgroundColor = 'green';
+    }
+
+    div.onclick = function(){
+        div.style.backgroundColor = 'yellow';
+    }
+
+
+    function $id(id){
+        return document.getElementById(id);
+    }
+</script>
